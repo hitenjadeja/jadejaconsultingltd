@@ -1,0 +1,193 @@
+
+
+
+@font-face {
+    font-family: 'Inter';
+    font-weight: 1 999;
+    src: url("../fonts/Inter.var.woff2") format("woff2"); 
+}
+
+*, *::before, *::after {
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+	font-size: 62.5% !important;
+}
+
+html, body { 
+	min-height: 100vh;
+	margin: 0;
+	background: #fff;
+	color: #111;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+
+
+$breakpoint-small:                              640px !default;  // Phone landscape
+$breakpoint-medium:                             768px !default;  // Tablet Landscape
+$breakpoint-large:                              1200px !default; // Desktop
+$breakpoint-xlarge:                             1400px !default; // Large Screens
+
+
+
+
+
+
+#intro {
+    padding: 20px;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+        padding: 100px;
+    }
+}
+
+
+
+.intro-text {
+    padding-top: 100px;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+        padding-top: 160px;
+    }
+}
+
+
+.intro-title {
+    font-size : 12vw;
+    line-height: 1.2;
+    margin: 20px 0 0 0;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    color: #354CBB;
+    margin-bottom: 50px;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+        font-size: 7rem;
+        letter-spacing: -0.1rem;
+        margin-bottom: 100px;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+        font-size: 9rem;
+        letter-spacing: -0.15rem;
+    }
+}
+
+.intro-subtitle {
+    font-size : 5vw;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    color: #222;
+
+    .highlight {
+        color: #354CBB;
+    }
+
+    @media only screen and (min-width: $breakpoint-medium) {
+        font-size: 3rem;
+        letter-spacing: -0.1rem;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+        font-size: 4rem;
+        letter-spacing: -0.15rem;
+    }
+}
+
+.lead-text {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 50px;
+
+    
+    @media only screen and (min-width: $breakpoint-medium) {
+        font-size: 3rem;
+        margin-bottom: 100px;
+    }
+
+}
+
+.underline {
+    text-decoration: none !important;
+    position: relative;
+    display: inline-block;
+    padding: 2px 6px;
+    z-index: 1;
+    transition: background-color 150ms ease-in-out;
+    color: #354CBB;
+
+    @media only screen and (min-width: $breakpoint-medium) {
+		padding: 2px 12px;
+    }
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        bottom: 0;
+        height: 2px;
+        width: calc(100% - 12px);
+        background: #354CBB;
+        transition: opacity 150ms ease-in-out;
+
+        @media only screen and (min-width: $breakpoint-medium) {
+            left: 12px;
+            width: calc(100% - 24px);
+        }
+    }
+
+    &:hover {
+        background: rgba(#354CBB, .1);
+        color: #354CBB !important;
+        
+        &:before {
+            opacity: 0;
+        }    
+    }
+}
+
+.intro-title {}
+
+.caption {
+    font-size: 1.3rem;
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.skills {
+   
+}
+
+.skills__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills__item {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.8;
+    font-weight: 400;
+}
